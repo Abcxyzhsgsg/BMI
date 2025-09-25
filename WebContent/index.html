@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Health Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <div class="logo-text">
+                        <h1>BMI Health Calculator</h1>
+                        <p>Modern health assessment platform</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    
+
+        <!-- Calculator Form -->
+        <section class="calculator-section">
+            <div class="container">
+                <div class="calculator-card">
+                    <div class="form-header">
+                        <h3>Enter Your Details</h3>
+                        <p>All information is processed securely and privately</p>
+                    </div>
+                    
+                    <form id="bmiForm" class="bmi-form">
+                        <div class="form-grid">
+                            <div class="input-group">
+                                <div class="floating-input">
+                                    <input type="number" id="height" name="height" step="0.1" min="50" max="300" required>
+                                    <label for="height">Height (cm)</label>
+                                    <i class="fas fa-ruler-vertical input-icon"></i>
+                                </div>
+                                <small>Enter your height in centimeters</small>
+                            </div>
+                            
+                            <div class="input-group">
+                                <div class="floating-input">
+                                    <input type="number" id="weight" name="weight" step="0.1" min="10" max="500" required>
+                                    <label for="weight">Weight (kg)</label>
+                                    <i class="fas fa-weight input-icon"></i>
+                                </div>
+                                <small>Enter your weight in kilograms</small>
+                            </div>
+                        </div>
+                        
+                        <div class="form-grid">
+                            <div class="input-group">
+                                <div class="floating-input">
+                                    <input type="number" id="age" name="age" step="1" min="1" max="120">
+                                    <label for="age">Age (Optional)</label>
+                                    <i class="fas fa-birthday-cake input-icon"></i>
+                                </div>
+                            </div>
+                            
+                            <div class="input-group">
+                                <select id="gender" name="gender" class="select-input">
+                                    <option value="">Select Gender (Optional)</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-submit">
+                            <button type="submit" class="btn-calculate">
+                                <i class="fas fa-calculator"></i>
+                                Calculate My BMI
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- BMI Reference Chart -->
+        <section class="reference-section">
+            <div class="container">
+                <div class="reference-card">
+                    <h3>BMI Categories Reference</h3>
+                    <div class="reference-grid">
+                        <div class="reference-item underweight">
+                            <div class="reference-indicator"></div>
+                            <div class="reference-content">
+                                <div class="reference-category">Underweight</div>
+                                <div class="reference-range">Below 18.5</div>
+                            </div>
+                        </div>
+                        <div class="reference-item normal">
+                            <div class="reference-indicator"></div>
+                            <div class="reference-content">
+                                <div class="reference-category">Normal</div>
+                                <div class="reference-range">18.5 - 24.9</div>
+                            </div>
+                        </div>
+                        <div class="reference-item overweight">
+                            <div class="reference-indicator"></div>
+                            <div class="reference-content">
+                                <div class="reference-category">Overweight</div>
+                                <div class="reference-range">25.0 - 29.9</div>
+                            </div>
+                        </div>
+                        <div class="reference-item obese">
+                            <div class="reference-indicator"></div>
+                            <div class="reference-content">
+                                <div class="reference-category">Obese</div>
+                                <div class="reference-range">30.0 and above</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>
+                <i class="fas fa-info-circle"></i>
+                <strong>Medical Disclaimer:</strong> This BMI calculator provides general information only and should not replace professional medical consultation.
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

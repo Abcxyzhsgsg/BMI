@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Results - Health Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <div class="logo-text">
+                        <h1>BMI Calculator</h1>
+                        <p>Get Your Health Status</p>
+                    </div>
+                </div>
+                <button id="backBtn" class="btn-back">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to Calculator
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- BMI Result -->
+        <section class="result-section">
+            <div class="container">
+                <div class="result-card">
+                    <div class="result-header">
+                        <h2>Your BMI Results</h2>
+                        <p>Based on your height and weight measurements</p>
+                    </div>
+                    
+                    <div class="result-display">
+                        <div class="bmi-score">
+                            <div id="bmiValue" class="bmi-value">0.0</div>
+                            <div class="bmi-label">BMI Score</div>
+                        </div>
+                        <div class="bmi-category">
+                            <div id="bmiCategory" class="category-text">Normal Weight</div>
+                            <div id="bmiStatus" class="status-badge">Healthy Range</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Health Recommendations -->
+        <section class="recommendations-section">
+            <div class="container">
+                <div class="recommendations-card">
+                    <h3>Personalized Health Recommendations</h3>
+                    <div id="recommendationsContent" class="recommendations-content">
+                        <!-- Dynamic content will be inserted here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Health Tips with Images -->
+        <section class="tips-section">
+            <div class="container">
+                <div class="tips-card">
+                    <h3>Health Tips & Lifestyle Advice</h3>
+                    <div id="healthTips" class="tips-grid">
+                        <!-- Dynamic content will be inserted here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Diet Recommendations -->
+        <section class="diet-section">
+            <div class="container">
+                <div class="diet-card">
+                    <h3>Recommended Diet Plan</h3>
+                    <div id="dietRecommendations" class="diet-content">
+                        <!-- Dynamic content will be inserted here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Exercise Recommendations -->
+        <section class="exercise-section">
+            <div class="container">
+                <div class="exercise-card">
+                    <h3>Exercise & Activity Plan</h3>
+                    <div id="exerciseRecommendations" class="exercise-content">
+                        <!-- Dynamic content will be inserted here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!-- Contact Section -->
+<!-- Contact Section -->
+<section class="contact-section">
+    <div class="container">
+        <div class="contact-card">
+            <h2 class="contact-heading">Contact</h2>
+            <div class="contact-info-vertical">
+                <div class="contact-item">
+                    <i class="fas fa-user"></i>
+                    <span class="contact-text">Abdulla</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:shaikabdulla40767@gmail.com" class="contact-link">shaikabdulla40767@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>
+                <i class="fas fa-info-circle"></i>
+                This BMI calculator is for informational purposes only and should not replace professional medical advice.
+            </p>
+        </div>
+    </footer>
+
+    <script src="result.js"></script>
+</body>
+</html>

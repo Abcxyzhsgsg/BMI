@@ -1,0 +1,732 @@
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #1f2937;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Header */
+.header {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 1rem 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo-icon {
+    background: linear-gradient(135deg, #8b5cf6, #3b82f6);
+    padding: 0.75rem;
+    border-radius: 1rem;
+    color: white;
+    font-size: 1.5rem;
+    box-shadow: 0 8px 32px rgba(139, 92, 246, 0.3);
+}
+
+.logo-text h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #8b5cf6, #3b82f6);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.25rem;
+}
+
+.logo-text p {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+}
+
+.btn-back {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.75rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.btn-back:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Main content */
+.main-content {
+    padding: 2rem 0;
+}
+
+/* Cards */
+.intro-card,
+.calculator-card,
+.reference-card,
+.result-card,
+.recommendations-card,
+.tips-card,
+.diet-card,
+.exercise-card,
+.resources-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Introduction section */
+.intro-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.intro-header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #8b5cf6, #3b82f6);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+}
+
+.intro-header p {
+    font-size: 1.125rem;
+    color: #6b7280;
+    font-weight: 500;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.feature-item {
+    text-align: center;
+    padding: 2rem;
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.feature-item:hover {
+    background: rgba(255, 255, 255, 0.7);
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    padding: 1rem;
+    border-radius: 1rem;
+    color: white;
+    font-size: 1.5rem;
+    margin: 0 auto 1rem;
+    width: fit-content;
+    transition: transform 0.3s ease;
+}
+
+.feature-item:hover .feature-icon {
+    transform: scale(1.1);
+}
+
+.feature-item h3 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.feature-item p {
+    color: #6b7280;
+}
+
+/* Form styles */
+.form-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.form-header h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #8b5cf6, #3b82f6);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.5rem;
+}
+
+.form-header p {
+    color: #6b7280;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.input-group {
+    position: relative;
+}
+
+.floating-input {
+    position: relative;
+}
+
+.floating-input input {
+    width: 100%;
+    padding: 1.25rem 3rem 1.25rem 1rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 0.75rem;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.floating-input input:focus {
+    outline: none;
+    border-color: #8b5cf6;
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+}
+
+.floating-input label {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    padding: 0 0.5rem;
+    color: #6b7280;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.floating-input input:focus + label,
+.floating-input input:not(:placeholder-shown) + label {
+    top: 0;
+    font-size: 0.875rem;
+    color: #8b5cf6;
+}
+
+.input-icon {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6b7280;
+}
+
+.select-input {
+    width: 100%;
+    padding: 1.25rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 0.75rem;
+    font-size: 1rem;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.select-input:focus {
+    outline: none;
+    border-color: #8b5cf6;
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+}
+
+.input-group small {
+    display: block;
+    margin-top: 0.5rem;
+    color: #6b7280;
+    font-size: 0.875rem;
+}
+
+.form-submit {
+    text-align: center;
+}
+
+.btn-calculate {
+    background: linear-gradient(135deg, #8b5cf6, #3b82f6);
+    color: white;
+    border: none;
+    padding: 1rem 2.5rem;
+    border-radius: 1rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 32px rgba(139, 92, 246, 0.3);
+}
+
+.btn-calculate:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(139, 92, 246, 0.4);
+}
+
+.btn-calculate i {
+    margin-right: 0.75rem;
+}
+
+/* BMI Reference */
+.reference-card h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #8b5cf6, #3b82f6);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 2rem;
+}
+
+.reference-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.reference-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+}
+
+.reference-item:hover {
+    transform: scale(1.02);
+}
+
+.reference-indicator {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.reference-item:hover .reference-indicator {
+    transform: scale(1.1);
+}
+
+.reference-category {
+    font-weight: 700;
+    font-size: 1.125rem;
+}
+
+.reference-range {
+    font-weight: 500;
+}
+
+.reference-item.underweight {
+    background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+}
+
+.reference-item.underweight .reference-indicator {
+    background: linear-gradient(135deg, #60a5fa, #3b82f6);
+}
+
+.reference-item.underweight .reference-category {
+    color: #1e40af;
+}
+
+.reference-item.underweight .reference-range {
+    color: #3b82f6;
+}
+
+.reference-item.normal {
+    background: linear-gradient(135deg, #dcfce7, #bbf7d0);
+}
+
+.reference-item.normal .reference-indicator {
+    background: linear-gradient(135deg, #4ade80, #22c55e);
+}
+
+.reference-item.normal .reference-category {
+    color: #166534;
+}
+
+.reference-item.normal .reference-range {
+    color: #22c55e;
+}
+
+.reference-item.overweight {
+    background: linear-gradient(135deg, #fef3c7, #fed7aa);
+}
+
+.reference-item.overweight .reference-indicator {
+    background: linear-gradient(135deg, #fbbf24, #f59e0b);
+}
+
+.reference-item.overweight .reference-category {
+    color: #92400e;
+}
+
+.reference-item.overweight .reference-range {
+    color: #f59e0b;
+}
+
+.reference-item.obese {
+    background: linear-gradient(135deg, #fee2e2, #fecaca);
+}
+
+.reference-item.obese .reference-indicator {
+    background: linear-gradient(135deg, #f87171, #ef4444);
+}
+
+.reference-item.obese .reference-category {
+    color: #991b1b;
+}
+
+.reference-item.obese .reference-range {
+    color: #ef4444;
+}
+
+/* Results page styles */
+.result-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.result-header h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.result-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+
+.bmi-score {
+    text-align: center;
+}
+
+.bmi-value {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #8b5cf6;
+    margin-bottom: 0.5rem;
+}
+
+.bmi-label {
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+.bmi-category {
+    text-align: center;
+}
+
+.category-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.status-badge {
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+/* Health tips grid */
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.tip-item {
+    background: white;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    border: 1px solid #e5e7eb;
+    transition: all 0.3s ease;
+}
+
+.tip-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.tip-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.tip-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.tip-icon {
+    color: #8b5cf6;
+}
+
+.tip-title {
+    font-weight: 600;
+}
+
+.tip-description {
+    color: #6b7280;
+    font-size: 0.875rem;
+}
+
+/* Diet and Exercise sections */
+.diet-content,
+.exercise-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.diet-category,
+.exercise-category {
+    background: white;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    border: 1px solid #e5e7eb;
+}
+
+.category-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.category-icon {
+    background: linear-gradient(135deg, #8b5cf6, #3b82f6);
+    color: white;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    font-size: 1.125rem;
+}
+
+.category-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+.category-list {
+    list-style: none;
+}
+
+.category-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: #4b5563;
+}
+
+.category-list li i {
+    color: #10b981;
+    margin-top: 0.25rem;
+}
+
+/* Resources section */
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.resource-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(139, 92, 246, 0.05);
+    border-radius: 0.75rem;
+}
+
+.resource-item i {
+    font-size: 1.125rem;
+    color: #8b5cf6;
+}
+
+.resource-title {
+    font-weight: 500;
+}
+
+.resource-desc {
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+/* Footer */
+.footer {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 2rem 0;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer i {
+    color: #8b5cf6;
+    margin-right: 0.5rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 0.75rem;
+    }
+    
+    .header-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .intro-header h2 {
+        font-size: 2rem;
+    }
+    
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .result-display {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .tips-grid,
+    .diet-content,
+    .exercise-content,
+    .resources-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Loading animation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loading {
+    animation: spin 1s linear infinite;
+}
+
+/* Utility classes */
+.text-center {
+    text-align: center;
+}
+
+.mb-1 { margin-bottom: 0.25rem; }
+.mb-2 { margin-bottom: 0.5rem; }
+.mb-3 { margin-bottom: 0.75rem; }
+.mb-4 { margin-bottom: 1rem; }
+
+.mt-1 { margin-top: 0.25rem; }
+.mt-2 { margin-top: 0.5rem; }
+.mt-3 { margin-top: 0.75rem; }
+.mt-4 { margin-top: 1rem; }
+/* Contact Section */
+/* Contact Section */
+.contact-section {
+    padding: 2rem 0;
+}
+
+.contact-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(15px);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    width: 1165px; /* Fixed width for better alignment */
+    margin-left: 0; /* Align to the left */
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Contact Heading */
+.contact-heading {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: left;
+    margin-bottom: 1rem;
+    color: #3b82f6;
+}
+
+/* Contact Info (Vertical Layout) */
+.contact-info-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(139, 92, 246, 0.05);
+    padding: 0.6rem 0.75rem;
+    border-radius: 0.5rem;
+    font-size: 0.95rem;
+    width: 100%;
+}
+
+.contact-item i {
+    color: #8b5cf6;
+    font-size: 1rem;
+}
+
+.contact-text,
+.contact-link {
+    color: #1f2937;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.contact-link:hover {
+    color: #8b5cf6;
+}
